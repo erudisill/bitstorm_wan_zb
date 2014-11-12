@@ -50,6 +50,7 @@
 #include "phy.h"
 #include "sys.h"
 #include "nwk.h"
+#include "halUart.h"
 #include "halLed.h"
 
 /*- Definitions ------------------------------------------------------------*/
@@ -94,6 +95,7 @@ int main(void)
   while (1)
   {
     SYS_TaskHandler();
+    HAL_UartTaskHandler();
     APP_TaskHandler();
   }
 }
